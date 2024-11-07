@@ -244,6 +244,8 @@ header .container nav ul li:last-child{
     }
     .srv-box i{
         margin-bottom: 20px;
+        margin-right: 0px;
+
     }  
 }
 .srv-box .txt h2{
@@ -342,31 +344,28 @@ header .container nav ul li:last-child{
     background-color: var(--main_color);
 }
 .portfolio .port-pro{
-    width: 100%;
-    margin: 50px 0px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
-    grid-row-gap: 2px;
-    
-    
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
 }
-@media (max-width:767px) {
-    .portfolio .port-pro{
-        width: 100%;
-        margin: 50px 0px;
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
-        grid-row-gap: 2px;
-        
-        
-    }
-}
+
 .portfolio .port-pro .pro{
-    width: 100%;
-    height: 300px;
     position: relative;
     overflow: hidden;
     perspective: 450px;
+}
+@media (min-width:768px) {
+    .portfolio .port-pro .pro{
+        flex-basis: 50%;
+        
+
+    }
+}
+@media (min-width:1199px) {
+    .portfolio .port-pro .pro{
+        flex-basis: 25%;
+
+    }
 }
 
 .portfolio .port-pro .pro img{
@@ -409,6 +408,7 @@ header .container nav ul li:last-child{
 .portfolio .info{
     width: 100%;
     text-align: center;
+    margin-top: 100px;
 }
 .portfolio .info a{
     text-decoration: none;
@@ -469,6 +469,373 @@ header .container nav ul li:last-child{
     text-transform: uppercase;
 }
 /* end video */
+/* start about */
+.about{
+    overflow: hidden;
+    text-align: center;
+}
+
+.about  img{
+    position: relative;
+    bottom: -80px;
+    margin-bottom: -80px;
+    max-width: 100%;
+}
+@media (max-width:767px) {
+    .about{
+        overflow: hidden;
+        text-align: center;
+    }
+
+    .about img{
+        position: relative;
+        left: -12px;
+        bottom: -50px;
+        max-width: 100%;
+        margin-bottom: -50px;
+
+    
+    }
+}
+/* end about */
+/* start state */
+.state{
+    width: 100%;
+    height: 50vh;
+    background-image: url(../image/stats.png);
+    background-size: cover;
+    position: relative;
+
+}
+.state::before{
+    content: "";
+  
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #12121287;
+    width: 100%;
+    height: 100%;
+}
+
+
+.state .stat-box{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    background-color: var(--transparent-color);
+    padding: 52px 0px;
+    
+    
+}
+.state .stat-box .box{
+    font-size: 20px;
+    color: white;
+    flex-basis: auto;
+}
+
+.state .stat-box .box i{
+    background-color: black;
+    padding: 15px;
+    border-radius: 50%;
+    margin-bottom: 25px;
+}
+.state .stat-box .box h2{
+    font-size: 35px;
+    margin-bottom: 25px;
+}
+.state .stat-box .box p{
+    font-size: 14px;
+}
+@media (min-width:768px) and (max-width:991px) {
+    .state{
+        width: 100%;
+        height: 200vh;
+   
+    
+    }
+    .state .stat-box .box{
+        font-size: 20px;
+        color: white;
+        margin-top: 50px;
+        flex-basis: 50%;
+    }
+}
+@media (max-width:767px) {
+    .state{
+        width: 100%;
+        height: 200vh;
+
+    
+    }
+    .state .stat-box{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+       
+        text-align: center;
+        transform: translate(-50%, -50%);
+        background-color: var(--transparent-color);
+        
+        
+    }
+    .state .stat-box .box{
+        font-size: 20px;
+        color: white;
+        margin-top: 50px;
+    }
+   
+}
+/* end state */
+/* start skills */
+.test-skill{
+    width: 100%;
+}
+.test-skill .container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.test-skill .container .testimontions,
+.test-skill .container .skills{
+    width: 47%;
+}
+.test-skill .container .testimontions .main-heading,
+.test-skill .container .skills .main-heading{
+    width: 100%;
+}
+.test-skill .container .testimontions .main-heading h2,
+.test-skill .container .skills .main-heading h2{
+    font-size: 20px;
+}
+.test-skill .container .testimontions .profile{
+    margin-bottom: 30px;
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.test-skill .container .testimontions .profile img{
+    width: 100px;
+    border-radius: 50%;
+    margin: auto;
+    margin-right: 50px;
+   
+}
+.test-skill .container .testimontions .profile p{
+    width: calc(100% - 150px);
+    padding-bottom: 30px;
+    border-bottom: 2px solid #a2a2a2;
+    position: relative;
+}
+.test-skill .container .testimontions .profile p span{
+    position: absolute;
+    bottom: 0px;
+    right: 20px;
+    color: #a2a2a2;
+}
+
+@media (max-width:991px) {
+    .test-skill .container .testimontions,
+    .test-skill .container .skills{
+        flex-basis: 100%;
+    }
+}
+@media (max-width:767px) {
+    .test-skill .container .testimontions .profile img{
+        width: 100px;
+        border-radius: 50%;
+        margin:50px auto;
+
+       
+    }
+.test-skill .container .testimontions .profile p{
+    flex-basis: 100%;
+}
+}
+.testimontions .tabs{
+    width: 100%;
+    margin: 50px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+.testimontions .tabs span:first-child{
+    width: 25px;
+    height: 25px;
+    border: 2px solid black;
+    border-radius: 50%;
+    margin: 5px;
+}
+.testimontions .tabs span:nth-child(2){
+    width: 25px;
+    height: 25px;
+    border: 2px solid black;
+    border-radius: 50%;
+    margin: 5px;
+    background-color: var(--main_color);
+}
+.testimontions .tabs span:last-child{
+    width: 25px;
+    height: 25px;
+    border: 2px solid black;
+    border-radius: 50%;
+    margin: 5px;
+}
+.skills .skill{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.skills .skill P:first-child{
+    color: black;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.skills .skill .mark{
+    width: 100%;
+    height: 30px;
+    background-color: #a2a2a2;
+    margin: 15px 0px;
+}
+.skills .skill .mark span{
+    display: inline-block;
+    width: 100%;
+    height: 30px;
+    background-color: var(--main_color);
+}
+.skills .skill .mark .admark{
+    position: relative;
+    width: 90%;
+}
+.skills .skill .mark .admark::after{
+    content: "90%";
+    display: block;
+    width: 45px;
+    height: 25px;
+    background-color: black;
+    position: absolute;
+    top: -49px;
+    right: calc(100% - 105%);
+    border-radius: 25%;
+    color: white;
+    text-align: center;
+}
+.skills .skill .mark .admark::before{
+    content: "";
+    width: 0px;
+    display: block;
+    border-width: 13px;
+    border-style: solid;
+    border-color: #101010 transparent transparent transparent;
+    position: absolute;
+    top: -25px;
+    right: calc(100% - 102%);
+
+}
+.skills .skill .mark .htmlmark{
+    position: relative;
+
+    width: 80%;
+}
+.skills .skill .mark .htmlmark::after{
+    content: "80%";
+    display: block;
+    width: 45px;
+    height: 25px;
+    background-color: black;
+    position: absolute;
+    top: -49px;
+    right: calc(100% - 105%);
+    border-radius: 25%;
+    color: white;
+    text-align: center;
+}
+.skills .skill .mark .htmlmark::before{
+    content: "";
+    width: 0px;
+    display: block;
+    border-width: 13px;
+    border-style: solid;
+    border-color: #101010 transparent transparent transparent;
+    position: absolute;
+    top: -25px;
+    right: calc(100% - 102%);
+
+}
+.skills .skill .mark .javemark{
+    position: relative;
+
+    width: 75%;
+}
+.skills .skill .mark .javemark::after{
+    content: "75%";
+    display: block;
+    width: 45px;
+    height: 25px;
+    background-color: black;
+    position: absolute;
+    top: -49px;
+    right: calc(100% - 105%);
+    border-radius: 25%;
+    color: white;
+    text-align: center;
+}
+.skills .skill .mark .javemark::before{
+    content: "";
+    width: 0px;
+    display: block;
+    border-width: 13px;
+    border-style: solid;
+    border-color: #101010 transparent transparent transparent;
+    position: absolute;
+    top: -25px;
+    right: calc(100% - 102%);
+
+}
+.skills .skill .mark .php-mark{
+    position: relative;
+    width: 95%;
+}
+.skills .skill .mark .php-mark::after{
+    content: "90%";
+    display: block;
+    width: 45px;
+    height: 25px;
+    background-color: black;
+    position: absolute;
+    top: -49px;
+    right: calc(100% - 105%);
+    border-radius: 25%;
+    color: white;
+    text-align: center;
+}
+.skills .skill .mark .php-mark::before{
+    content: "";
+    width: 0px;
+    display: block;
+    border-width: 13px;
+    border-style: solid;
+    border-color: #101010 transparent transparent transparent;
+    position: absolute;
+    top: -25px;
+    right: calc(100% - 102%);
+
+}
+
+/* end skills */
 /* screens */
 /* small screen */
 @media (min-width:768px){
