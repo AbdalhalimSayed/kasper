@@ -836,7 +836,252 @@ header .container nav ul li:last-child{
 }
 
 /* end skills */
+/* start quote */
+.quote{
+    margin: 50px 0px;
+    width: 100%;
+    min-height: 25vh;
+    background-image: url('../image/quote.jpg');
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.quote::before{
+    content: "";
+    position: absolute;
+
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #5c5c5c75;
+}
+.quote .container p{
+    width: 100%;
+    font-size: 25px;
+    color: white;
+    position: relative;
+    z-index: 10px;
+    font-weight: bold;
+}
+.quote .container p span{
+    font-size: 18px;
+    font-weight: normal;
+
+}
+
+/* end quote */
 /* screens */
+/* start pricing */
+.pricing{
+    width: 100%;
+    position: relative;
+}
+.pricing .container .plan{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.pricing .container .plan .plan-type{
+    flex-basis: 25%;
+
+}
+@media (max-width:767px) {
+    .pricing .container .plan .plan-type{
+        flex-basis: 100%;
+    
+    }
+}
+@media (min-width:768px) and (max-width:991px) {
+    .pricing .container .plan .plan-type{
+        flex-basis: 50%;
+    
+    }
+}
+@media (min-width:992px) and (max-width:1199px)  {
+    .pricing .container .plan{
+        
+        justify-content: flex-start;
+
+    }
+    .pricing .container .plan .plan-type{
+        flex-basis: 33.333%;
+    
+    }
+}
+.pricing .container .plan .plan-type .plan-name{
+    width: 90%;
+    margin: auto;
+    border-width: 3px;
+    border-style: solid;
+    border-color: var(--main_color) transparent;
+    padding: 25px 0px;
+}
+.pricing .container .plan .plan-type .plan-name p{
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.pricing .container .plan .plan-type .plan-name sup{
+    font-size: 24px;
+    margin-right: 5px;
+}
+.pricing .container .plan .plan-type .plan-name h2{
+    display: inline-block;
+    font-size: 32px;
+}
+.pricing .container .plan .plan-type .plan-name sub{
+    font-size: 24px;
+    margin-left: 5px;
+}
+.pricing .container .plan .plan-type .plan-feature{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding: 25px 0px;
+    border-bottom: 1px solid var(--main_color);
+} 
+
+.pricing .container .plan .plan-type .plan-feature p{
+    padding: 25px 0px;
+    width: 49%;
+    margin: auto;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent transparent var(--main_color) transparent;
+}
+.pricing .container .plan .plan-type .plan-feature p:last-child{
+    border: none;
+}
+.pricing .container .plan .plan-type .btn{
+    border: 3px solid var(--main_color);
+    width: 38%;
+    margin: 30px auto;
+    padding: 13px
+}
+
+/* end pricing */
+/* start contact */
+.contact .container .contct{
+    width: 100%;
+    text-align: center;
+    margin: 50px 0px;
+
+}
+.contact .container .contct h3{
+    font-weight: normal;
+    text-transform: capitalize;
+}
+.contact .container .contct .btn{
+    width: 200px;
+    margin: 10px auto;
+    background-color: var(--main_color);
+    text-transform: capitalize;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+
+}
+.contact .mail{
+    width: 100%;
+    background-image: url(../image/subscribe.jpg);
+    min-height: 35vh;
+    background-size: cover;
+    margin:20px 0px ;
+}
+.contact .mail .container{
+    min-height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.contact .mail .container .form{
+    
+    flex-basis: 50%;
+    
+}
+.contact .mail .container .txt{
+    font-size: 20px;
+    flex-basis: 50%;
+    margin-left: 10px;
+}
+
+.contact .mail .container .form form{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    border: 3px solid white;
+    margin-top: 20px;
+}
+
+
+.contact .mail .container .form form input[type="email"]{
+    width: 70%;
+    padding-left: 50px;
+    background-color: #80808042;
+    position: relative;
+}
+.contact .mail .container .form form label{
+    position: absolute;
+    font-size: inherit;
+    transform: translate(25px, 17px);
+}
+.contact .mail .container .form form input[type="email"]:focus{
+    background-color: #80808042;
+    outline: none;
+
+}
+.contact .mail .container .form form input[type="email"]::placeholder{
+    color: white;
+    padding-left: 10px;
+
+}
+
+.contact .mail .container .form form input[type="submit"]{
+    width: 30%;
+    background-color: var(--main_color);
+}
+
+.contact .mail .container .form form input{
+    height: 60px;
+    font-size: 20px;
+    border: none;
+    color: white;
+}
+
+@media (max-width:991px) {
+    .contact .mail .container{
+        width: 100%;
+        min-height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+    .contact .mail .container .form{
+        
+        width: 100%;
+        
+    }
+    .contact .mail .container .txt{
+        flex-basis: 100%;
+        margin:30px 0px;
+
+    }
+    .contact .mail .container .form form input{
+        height: 60px;
+        font-size: 14px;
+        border: none;
+        color: white;
+    }
+}
+/* end contact */
 /* small screen */
 @media (min-width:768px){
     .container{
@@ -931,3 +1176,20 @@ header .container nav ul li a:hover{
 }
 
 /* end component */
+.upper {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+
+    text-align: center;
+}
+.upper a{
+    text-decoration: none;
+    display: inline-block;
+    background-color: #a2a2a2ba;
+    padding: 10px;
+    border-radius: 50%;
+    color: white;
+}
